@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme inline {
+   --color-cream: #F4E7CF;
+  --color-cream-dark: #E7D6B8;
+  --color-slate: #6B4325;
+  --color-slate-light: #8B5E3C;
+  --color-charcoal: #4A2F1D;
+  --color-charcoal-light: #6B4325;
+  --color-warm-white: #FFF8EE;
+  --color-dusty-blue: #C89F6A;
+  --font-heading: "Lacquer", cursive;
+  --font-body: "Inter Tight", system-ui, sans-serif;
+
+  --animate-gradient-drift: gradient-drift 15s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-bounce-down: bounce-down 2s ease-in-out infinite;
+
+  @keyframes gradient-drift {
+    0%, 100% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+  }
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+  @keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: var(--color-cream);
+  background-color: var(--color-slate);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #556d82;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Scroll reveal system */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.reveal-up {
+  transform: translateY(40px);
+}
+.reveal.reveal-left {
+  transform: translateX(40px);
+}
+.reveal.reveal-right {
+  transform: translateX(-40px);
+}
+.reveal.reveal-scale {
+  transform: scale(0.95);
+}
+.reveal.reveal-hero {
+  transform: translateY(20px);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
