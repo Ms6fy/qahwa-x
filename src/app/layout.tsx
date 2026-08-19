@@ -11,6 +11,7 @@ keywords:
   "Qahwa X, premium coffee, specialty coffee, espresso bar, V60, cold brew, artisan coffee, café, desserts, pastries",
 };
 
+
 export default function RootLayout({
   children,
 }: {
