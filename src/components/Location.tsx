@@ -36,7 +36,7 @@ export default function Location() {
                   <div className="flex justify-between">
                     <span>Daily</span>
                     <span className="font-medium text-charcoal">
-                      8 AM — 1 AM
+                      9 AM — 12 AM
                     </span>
                   </div>
                 </div>

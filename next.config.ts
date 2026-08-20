@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "eleven.ahmedgamal.dev",
+        hostname: "QahwaX.https://www.instagram.com/ms6.fy/",
       },
     ],
   },
